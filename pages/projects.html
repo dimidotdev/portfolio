@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | dimi.dev</title>
+    <meta name="description" content="Portfolio de projetos desenvolvidos com diversas tecnologias">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components/header.css">
+    <link rel="stylesheet" href="/assets/css/pages/projects.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">dimi.dev</div>
+            <ul class="nav-links">
+                <li><a href="/">Início</a></li>
+                <li><a href="/pages/about.html">Sobre</a></li>
+                <li><a href="/pages/projects.html" class="active">Projetos</a></li>
+                <li><a href="/pages/blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="projects-section">
+            <h1>Meus Projetos</h1>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Exemplo de card de projeto -->
+                <article class="project-card" data-category="fullstack">
+                    <div class="project-content">
+                        <h3>Nome do Projeto</h3>
+                        <p class="project-description">
+                            Descrição breve do projeto e suas principais características.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Spring</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank" rel="noopener">Demo</a>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </article>
+                <!-- Mais cards de projetos serão adicionados aqui -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/dimidotdev" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/projects.js"></script>
+</body>
+</html>
