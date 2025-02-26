@@ -1,0 +1,39 @@
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-width: 300px;
+}
+
+.notification.success {
+  border-left: 4px solid #00b894;
+}
+
+.notification.info {
+  border-left: 4px solid #0984e3;
+}
+
+.notification.warning {
+  border-left: 4px solid #fdcb6e;
+}
+
+.notification.error {
+  border-left: 4px solid #d63031;
+}
+
+@media (max-width: 768px) {
+  .notification {
+      top: auto;
+      bottom: 80px;
+      right: 20px;
+      left: 20px;
+      max-width: none;
+      text-align: center;
+  }
+}
