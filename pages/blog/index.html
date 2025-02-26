@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-    <title>dimi.dev</title>
-    <meta name="description" content="Portfolio de desenvolvedor fullstack especializado em Java, Spring, React e tecnologias web modernas">
+    <title>Blog | Dimi Dev</title>
+    <meta name="description" content="Blog com artigos sobre desenvolvimento, tecnologia e boas práticas">
     
     <!-- Estilos -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/components/header.css">
     <link rel="stylesheet" href="/assets/css/themes.css">
     <link rel="stylesheet" href="/assets/css/animations.css">
-    <link rel="stylesheet" href="/assets/css/pages/blog.css">
+    <link rel="stylesheet" href="/assets/css/pages/coming-soon.css">
     <link rel="stylesheet" href="/assets/css/components/notifications.css">
     <link rel="stylesheet" href="/assets/css/mobile.css">
     <link rel="stylesheet" href="/assets/css/components/header.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="nav-container">
@@ -51,48 +51,52 @@
     </nav>
     </header>
 
-    <main class="main-content">
-        <section class="blog-section">
-            <h1>Blog</h1>
-            
-            <div class="blog-categories">
-                <button class="category-btn active" data-category="all">Todos</button>
-                <button class="category-btn" data-category="backend">Backend</button>
-                <button class="category-btn" data-category="frontend">Frontend</button>
-                <button class="category-btn" data-category="devops">DevOps</button>
-                <button class="category-btn" data-category="career">Carreira</button>
-            </div>
-
-            <div class="posts-grid">
-                <!-- Exemplo de post -->
-                <article class="post-card" data-categories='["backend", "java"]'>
-                    <div class="post-date">26 Fev 2025</div>
-                    <h2 class="post-title">
-                        <a href="/pages/blog/posts/spring-boot-best-practices.html">
-                            Melhores Práticas com Spring Boot
-                        </a>
-                    </h2>
-                    <p class="post-excerpt">
-                        Uma análise detalhada das melhores práticas ao desenvolver aplicações com Spring Boot,
-                        incluindo padrões de projeto e otimizações de performance.
-                    </p>
-                    <div class="post-meta">
-                        <div class="post-tags">
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">Backend</span>
-                        </div>
-                        <span class="read-time">8 min leitura</span>
+    <main class="coming-soon">
+        <div class="container">
+            <div class="content">
+                <div class="animation-container">
+                    <div class="code-block">
+                        <pre><code>
+const blog = {
+    status: "Em construção 🚧",
+    progress: "loading...",
+    launch: "Em breve!",
+    author: "dimidotdev",
+    topics: [
+        "Desenvolvimento Web",
+        "Boas Práticas",
+        "Tutoriais",
+        "Tech Tips"
+    ]
+};
+                        </code></pre>
+                        <div class="cursor"></div>
                     </div>
-                </article>
+                </div>
+                <h1>Blog em Construção</h1>
+                <p class="description">
+                    Estou preparando conteúdo interessante sobre desenvolvimento, 
+                    tecnologia e boas práticas. Em breve você encontrará aqui 
+                    artigos, tutoriais e dicas.
+                </p>
+                <div class="blog-notification">
+                    <div class="blog-notification-content">
+                        <div class="loader"></div>
+                        <span>Preparando o ambiente...</span>
+                    </div>
+                </div>
+                <a href="/" class="back-button">Voltar para o início</a>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer">
         <div class="footer-content">
             <div class="social-links">
                 <a href="https://github.com/dimidotdev" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/matheus-dimi-silva/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </div>
     </footer>

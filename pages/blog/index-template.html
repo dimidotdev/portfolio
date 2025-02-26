@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="color-scheme" content="light dark">
-        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>dimi.dev</title>
-        <meta name="description" content="Portfolio de desenvolvedor fullstack especializado em Java, Spring, React e tecnologias web modernas">
-        
-        <!-- Estilos -->
-        <link rel="stylesheet" href="/assets/css/style.css">
-        <link rel="stylesheet" href="/assets/css/components/header.css">
-        <link rel="stylesheet" href="/assets/css/pages/home.css">
-        <link rel="stylesheet" href="/assets/css/themes.css">
-        <link rel="stylesheet" href="/assets/css/animations.css">
-        <link rel="stylesheet" href="/assets/css/components/notifications.css">
-        <link rel="stylesheet" href="/assets/css/mobile.css">
-        <link rel="stylesheet" href="/assets/css/components/hero.css">
-        <link rel="stylesheet" href="/assets/css/components/header.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <title>dimi.dev</title>
+    <meta name="description" content="Portfolio de desenvolvedor fullstack especializado em Java, Spring, React e tecnologias web modernas">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components/header.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/pages/blog.css">
+    <link rel="stylesheet" href="/assets/css/components/notifications.css">
+    <link rel="stylesheet" href="/assets/css/mobile.css">
+    <link rel="stylesheet" href="/assets/css/components/header.css">
+</head>
 <body>
     <header class="header">
         <nav class="nav-container">
@@ -32,49 +31,60 @@
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="/" class="active">Início</a></li>
+                <li><a href="/">Início</a></li>
                 <li><a href="/pages/about.html">Sobre</a></li>
                 <li><a href="/pages/projects.html">Projetos</a></li>
-                <li><a href="/pages/blog">Blog</a></li>
+                <li><a href="/pages/blog" class="active">Blog</a></li>
             </ul>
-            <div class="theme-switcher">
-                <button class="theme-btn" data-theme="light" title="Tema Claro">
-                    ☀️
-                </button>
-                <button class="theme-btn" data-theme="dark" title="Tema Escuro">
-                    🌙
-                </button>
-                <button class="theme-btn" data-theme="high-contrast" title="Alto Contraste">
-                    ⚡
-                </button>
-            </div>
         </nav>
+        <div class="theme-switcher">
+            <button class="theme-btn" data-theme="light" title="Tema Claro">
+                ☀️
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Tema Escuro">
+                🌙
+            </button>
+            <button class="theme-btn" data-theme="high-contrast" title="Alto Contraste">
+                ⚡
+            </button>
+        </div>
+    </nav>
     </header>
 
     <main class="main-content">
-        <section class="hero">
-            <h1 class="title">Olá, eu sou Matheus, também conhecido como dimi</h1>
-            <p class="subtitle">Desenvolvedor Fullstack</p>
-            <div class="tech-stack">
-                <span class="tech">Java</span>
-                <span class="tech">Spring</span>
-                <span class="tech">React</span>
-                <span class="tech">TypeScript</span>
-                <span class="tech">Next.js</span>
+        <section class="blog-section">
+            <h1>Blog</h1>
+            
+            <div class="blog-categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="backend">Backend</button>
+                <button class="category-btn" data-category="frontend">Frontend</button>
+                <button class="category-btn" data-category="devops">DevOps</button>
+                <button class="category-btn" data-category="career">Carreira</button>
             </div>
-        </section>
 
-        <section class="featured-projects">
-            <h2>Projetos em Destaque</h2>
-            <div class="projects-grid">
-                <!-- Projetos serão adicionados aqui -->
-            </div>
-        </section>
-
-        <section class="latest-posts">
-            <h2>Últimos Artigos</h2>
             <div class="posts-grid">
-                <!-- Posts serão adicionados aqui -->
+                <!-- Exemplo de post -->
+                <article class="post-card" data-categories='["backend", "java"]'>
+                    <div class="post-date">26 Fev 2025</div>
+                    <h2 class="post-title">
+                        <a href="/pages/blog/posts/spring-boot-best-practices.html">
+                            Melhores Práticas com Spring Boot
+                        </a>
+                    </h2>
+                    <p class="post-excerpt">
+                        Uma análise detalhada das melhores práticas ao desenvolver aplicações com Spring Boot,
+                        incluindo padrões de projeto e otimizações de performance.
+                    </p>
+                    <div class="post-meta">
+                        <div class="post-tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                        <span class="read-time">8 min leitura</span>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -91,6 +101,8 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/blog.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/theme.js"></script>
     <script src="/assets/js/matrix-effect.js"></script>
