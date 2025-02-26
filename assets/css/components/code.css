@@ -1,0 +1,20 @@
+/* Estilização para blocos de código */
+pre {
+  background: var(--bg-primary);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: var(--spacing-md) 0;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+}
+
+/* Estilização para código inline */
+p code {
+  background: var(--bg-primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}

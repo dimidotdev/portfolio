@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <title>Blog | dimi.dev</title>
+    <meta name="description" content="Artigos sobre desenvolvimento, tecnologia e experiências em programação">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components/header.css">
+    <link rel="stylesheet" href="/assets/css/pages/blog.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">dimi.dev</div>
+            <ul class="nav-links">
+                <li><a href="/">Início</a></li>
+                <li><a href="/pages/about.html">Sobre</a></li>
+                <li><a href="/pages/projects.html">Projetos</a></li>
+                <li><a href="/pages/blog" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="blog-section">
+            <h1>Blog</h1>
+            
+            <div class="blog-categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="backend">Backend</button>
+                <button class="category-btn" data-category="frontend">Frontend</button>
+                <button class="category-btn" data-category="devops">DevOps</button>
+                <button class="category-btn" data-category="career">Carreira</button>
+            </div>
+
+            <div class="posts-grid">
+                <!-- Exemplo de post -->
+                <article class="post-card" data-categories='["backend", "java"]'>
+                    <div class="post-date">26 Fev 2025</div>
+                    <h2 class="post-title">
+                        <a href="/pages/blog/posts/spring-boot-best-practices.html">
+                            Melhores Práticas com Spring Boot
+                        </a>
+                    </h2>
+                    <p class="post-excerpt">
+                        Uma análise detalhada das melhores práticas ao desenvolver aplicações com Spring Boot,
+                        incluindo padrões de projeto e otimizações de performance.
+                    </p>
+                    <div class="post-meta">
+                        <div class="post-tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                        <span class="read-time">8 min leitura</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/dimidotdev" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/blog.js"></script>
+</body>
+</html>
