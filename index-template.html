@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-    <title>dimi.dev</title>
-    <meta name="description" content="Portfolio de desenvolvedor fullstack especializado em Java, Spring, React e tecnologias web modernas">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/components/header.css">
-    <link rel="stylesheet" href="/assets/css/pages/home.css">
-    <meta name="color-scheme" content="light dark">
-    <script src="/assets/js/theme.js"></script>
-    <link rel="stylesheet" href="/assets/css/themes.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="light dark">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>dimi.dev</title>
+        <meta name="description" content="Portfolio de desenvolvedor fullstack especializado em Java, Spring, React e tecnologias web modernas">
+        
+        <!-- Estilos -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/components/header.css">
+        <link rel="stylesheet" href="/assets/css/pages/home.css">
+        <link rel="stylesheet" href="/assets/css/themes.css">
+        <link rel="stylesheet" href="/assets/css/animations.css">
+        <link rel="stylesheet" href="/assets/css/components/notifications.css">
+    </head>
 <body>
     <header class="header">
         <nav class="nav-container">
@@ -76,7 +79,64 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/matrix-effect.js"></script>
+    <script src="/assets/js/notifications.js"></script>
+    <script src="/assets/js/idle-detector.js"></script>
+    <script src="/assets/js/performance.js"></script>
+    <script src="/assets/js/keyboard-shortcuts.js"></script>
+
+    <script>
+        // Inicialização de todos os componentes
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializar o gerenciador de temas
+            const themeManager = new ThemeManager();
+
+            // Inicializar o efeito matrix
+            const matrixEffect = new MatrixEffect();
+            
+            // Observar mudanças de tema para ativar/desativar efeito matrix
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.attributeName === 'data-theme') {
+                        const currentTheme = document.documentElement.getAttribute('data-theme');
+                        if (currentTheme === 'high-contrast') {
+                            matrixEffect.start();
+                            NotificationSystem.show('Modo Matrix ativado! 🎭', 'info');
+                        } else {
+                            matrixEffect.stop();
+                        }
+                    }
+                });
+            });
+
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['data-theme']
+            });
+
+            // Inicializar detector de inatividade
+            new IdleDetector();
+
+            // Inicializar otimizador de performance
+            PerformanceOptimizer.initializeLazyLoading();
+
+            // Inicializar atalhos de teclado
+            KeyboardShortcuts.initialize();
+
+            // Configurar notificações para mudança de tema
+            const originalSetTheme = themeManager.setTheme.bind(themeManager);
+            themeManager.setTheme = (theme) => {
+                originalSetTheme(theme);
+                const themeNames = {
+                    'light': 'claro ☀️',
+                    'dark': 'escuro 🌙',
+                };
+                NotificationSystem.show(`Tema ${themeNames[theme]} ativado!`, 'success');
+            };
+        });
+    </script>
 </body>
 </html>
