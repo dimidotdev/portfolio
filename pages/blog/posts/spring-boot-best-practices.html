@@ -16,11 +16,21 @@
     <link rel="stylesheet" href="/assets/css/animations.css">
     <link rel="stylesheet" href="/assets/css/PAGES/post.css">
     <link rel="stylesheet" href="/assets/css/components/notifications.css">
+    <link rel="stylesheet" href="/assets/css/mobile.css">
+    <link rel="stylesheet" href="/assets/css/components/header.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">dimi.dev</div>
+            <div class="logo">
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    ☰
+                </button>
+                <a href="/" class="logo-link">
+                    <img src="/assets/img/logo.svg" alt="Logo dimi.dev" class="logo-img">
+                    mi.dev
+                </a>
+            </div>
             <ul class="nav-links">
                 <li><a href="/">Início</a></li>
                 <li><a href="/pages/about.html">Sobre</a></li>
@@ -93,6 +103,7 @@
     <script src="/assets/js/idle-detector.js"></script>
     <script src="/assets/js/performance.js"></script>
     <script src="/assets/js/keyboard-shortcuts.js"></script>
+    <script src="/assets/js/mobile-menu.js"></script>
 
     <script>
         // Inicialização de todos os componentes

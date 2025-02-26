@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="color-scheme" content="light dark">
     <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
     <title>dimi.dev</title>
     <meta name="description" content="Portfolio de desenvolvedor fullstack especializado em Java, Spring, React e tecnologias web modernas">
     
     <!-- Estilos -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/mobile.css">
     <link rel="stylesheet" href="/assets/css/components/header.css">
-    <link rel="stylesheet" href="/assets/css/pages/home.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/themes.css">
     <link rel="stylesheet" href="/assets/css/animations.css">
     <link rel="stylesheet" href="/assets/css/components/notifications.css">
+    <link rel="stylesheet" href="/assets/css/components/hero.css">
+    <link rel="stylesheet" href="/assets/css/components/cards.css">
+    <link rel="stylesheet" href="/assets/css/pages/home.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">dimi.dev</div>
+            <div class="logo">
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    ☰
+                </button>
+                <a href="/" class="logo-link">
+                    <img src="/assets/img/logo.svg" alt="Logo dimi.dev" class="logo-img">
+                    mi.dev
+                </a>
+            </div>
             <ul class="nav-links">
                 <li><a href="/" class="active">Início</a></li>
                 <li><a href="/pages/about.html">Sobre</a></li>
@@ -29,30 +41,197 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main>
         <section class="hero">
-            <h1 class="title">Olá, eu sou Matheus, também conhecido como dimi</h1>
-            <p class="subtitle">Desenvolvedor Fullstack</p>
-            <div class="tech-stack">
-                <span class="tech">Java</span>
-                <span class="tech">Spring</span>
-                <span class="tech">React</span>
-                <span class="tech">TypeScript</span>
-                <span class="tech">Next.js</span>
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Olá, eu sou <span class="accent">dimi</span></h1>
+                    <p class="subtitle">Desenvolvedor Fullstack</p>
+                    <p class="description">
+                        Criando soluções elegantes com Java, Spring Boot, React e TypeScript.
+                        Apaixonado por código limpo e experiências excepcionais.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="/pages/projects.html" class="btn btn-primary">Ver Projetos</a>
+                        <a href="/pages/about.html" class="btn btn-secondary">Sobre Mim</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=java" alt="Java" class="tech-icon">
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=spring" alt="Spring" class="tech-icon">
+                            <span>Spring</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" class="tech-icon">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=react" alt="React" class="tech-icon">
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" class="tech-icon">
+                            <span>TypesCript</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=nextjs" alt="Nextjs" class="tech-icon">
+                            <span>Next.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=electron" alt="Electron" class="tech-icon">
+                            <span>Electron</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" class="tech-icon">
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=nodejs" alt="NodeJS" class="tech-icon">
+                            <span>NodeJS</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=mongo" alt="MongoDB" class="tech-icon">
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" class="tech-icon">
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" class="tech-icon">
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="featured-projects">
-            <h2>Projetos em Destaque</h2>
-            <div class="projects-grid">
-                <!-- Projetos serão adicionados aqui -->
+            <div class="section-container">
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-gradient"></div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Nome do Projeto</h3>
+                            <p>Descrição curta do projeto e suas principais características.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Spring</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-gradient"></div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Nome do Projeto</h3>
+                            <p>Descrição curta do projeto e suas principais características.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Spring</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-gradient"></div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Nome do Projeto</h3>
+                            <p>Descrição curta do projeto e suas principais características.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Spring</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- // duplicar o article pra mais um projeto -->
+
+                </div>
+                <div class="section-footer">
+                    <a href="/pages/projects.html" class="link-more">Ver todos os projetos →</a>
+                </div>
             </div>
         </section>
 
-        <section class="latest-posts">
-            <h2>Últimos Artigos</h2>
-            <div class="posts-grid">
-                <!-- Posts serão adicionados aqui -->
+        <section class="blog-preview">
+            <div class="section-container">
+                <h2 class="section-title">Últimas do Blog</h2>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <span class="post-date">26 Fev 2025</span>
+                        <h3>
+                            <a href="#">Implementando Clean Architecture com Spring Boot</a>
+                        </h3>
+                        <p>Como estruturar seu projeto Spring Boot usando princípios de Clean Architecture.</p>
+                        <footer class="post-meta">
+                            <div class="post-tags">
+                                <span>Spring</span>
+                                <span>Arquitetura</span>
+                            </div>
+                            <span class="read-time">5 min</span>
+                        </footer>
+                    </article>
+                    <article class="post-card">
+                        <span class="post-date">26 Fev 2025</span>
+                        <h3>
+                            <a href="#">Implementando Clean Architecture com Spring Boot</a>
+                        </h3>
+                        <p>Como estruturar seu projeto Spring Boot usando princípios de Clean Architecture.</p>
+                        <footer class="post-meta">
+                            <div class="post-tags">
+                                <span>Spring</span>
+                                <span>Arquitetura</span>
+                            </div>
+                            <span class="read-time">5 min</span>
+                        </footer>
+                    </article>
+                    <article class="post-card">
+                        <span class="post-date">26 Fev 2025</span>
+                        <h3>
+                            <a href="#">Implementando Clean Architecture com Spring Boot</a>
+                        </h3>
+                        <p>Como estruturar seu projeto Spring Boot usando princípios de Clean Architecture.</p>
+                        <footer class="post-meta">
+                            <div class="post-tags">
+                                <span>Spring</span>
+                                <span>Arquitetura</span>
+                            </div>
+                            <span class="read-time">5 min</span>
+                        </footer>
+                    </article>
+
+                    <!-- // duplicar o article pra mais um post -->
+
+                </div>
+                <div class="section-footer">
+                    <a href="/pages/blog" class="link-more">Ver todas as publicações →</a>
+                </div>
             </div>
         </section>
     </main>
@@ -85,6 +264,7 @@
     <script src="/assets/js/idle-detector.js"></script>
     <script src="/assets/js/performance.js"></script>
     <script src="/assets/js/keyboard-shortcuts.js"></script>
+    <script src="/assets/js/mobile-menu.js"></script>
 
     <script>
         // Inicialização de todos os componentes
